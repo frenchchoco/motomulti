@@ -1,4 +1,8 @@
-# motogiga
+# motomulti
+
+A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga which is based on https://github.com/cryptosalomao/urabalu.
+
+---
  
 - 1st step is to download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
   - Place them into a single folder by extracting them, take note of where this folder is.
