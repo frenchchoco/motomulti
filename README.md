@@ -4,7 +4,7 @@ A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga w
 
 NONE OF THE FEATURES ARE READY YET, THE LIST WILL BE UPDATED GRADUALLY!!!!!
 
-# Features
+# Extra features compared to motogiga
 
 ⏳ parallel processing  
 ⏳ the ability to set gas fees in sats/vb  
