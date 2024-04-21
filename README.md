@@ -6,10 +6,10 @@ NONE OF THE FEATURES ARE READY YET, THE LIST WILL BE UPDATED GRADUALLY!!!!!
 
 Features:
 
-⏳ parallel processing
-⏳ the ability to set gas fees in sats/vb
-⏳ built-in sybiling without a separate script
-⏳ replacing fees
+⏳ parallel processing  
+⏳ the ability to set gas fees in sats/vb  
+⏳ built-in sybiling without a separate script  
+⏳ replacing fees  
 ⏳ using arguments to run different steps instead of commenting out stuff
 
 ---
