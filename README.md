@@ -13,6 +13,21 @@ NONE OF THE FEATURES ARE READY YET, THE LIST WILL BE UPDATED GRADUALLY!!!!!
 ⏳ using arguments to run different steps instead of commenting out stuff  
 ⏳ eventually: eliminating the need of manually running different steps by watching tx confimations automatically
 
+# pls gib
+
+If you found it useful, donate us precious tokens and i will spend it on hookers with dicks!
+
+## Tamas (meeeeeee :3)
+Bitcoin: bc1pffdrehs8455lgnwquggf4dzf6jduz8v7d2usflyujq4ggh4jaapqkpyaa7  
+EVM-based tokens (Ethereum, Polygon, Avalanche etc.): 0x0De8947c2ABd59C201e5EcE142bFCd22253BFC0d  
+Solana: bzuNzCMgxRgWuDhg9yBTsto9rkNL96LsVWo6YurNQQf
+
+## Mike (motogiga dev)
+Soon...
+
+## Guilherme (urabalu dev)
+Bitcoin: bc1qnggsl6k7npzaeql34w50ur4ytertps48tx7zqczuasz3mh4q9jlqlha0cl
+
 # Original description of motogiga (will be edited)
  
 - 1st step is to download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
