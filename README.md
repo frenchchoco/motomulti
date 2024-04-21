@@ -13,7 +13,7 @@ NONE OF THE FEATURES ARE READY YET, THE LIST WILL BE UPDATED GRADUALLY!!!!!
 ⏳ using arguments to run different steps instead of commenting out stuff  
 ⏳ eventually: eliminating the need of manually running different steps by watching tx confimations automatically
 
----
+# Original description of motogiga (will be edited)
  
 - 1st step is to download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
   - Place them into a single folder by extracting them, take note of where this folder is.
