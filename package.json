@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@cmdcode/crypto-utils": "^2.4.6",
-    "@cmdcode/tapscript": "^1.4.6"
+    "@cmdcode/tapscript": "^1.4.6",
+    "bitcoinjs-lib": "^6.1.5"
   }
 }

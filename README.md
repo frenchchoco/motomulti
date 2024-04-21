@@ -2,15 +2,13 @@
 
 A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga which is based on https://github.com/cryptosalomao/urabalu.
 
-NONE OF THE FEATURES ARE READY YET, THE LIST WILL BE UPDATED GRADUALLY!!!!!
-
 # Extra features compared to motogiga
 
 ⏳ parallel processing  
 ⏳ the ability to set gas fees in sats/vb  
 ⏳ built-in sybiling without a separate script  
 ⏳ replacing fees  
-⏳ using arguments to run different steps instead of commenting out stuff  
+✅ using arguments to run different steps instead of commenting out stuff  
 ⏳ eventually: eliminating the need of manually running different steps by watching tx confimations automatically
 
 # pls gib
@@ -28,72 +26,87 @@ Soon...
 ## Guilherme (urabalu dev)
 Bitcoin: bc1qnggsl6k7npzaeql34w50ur4ytertps48tx7zqczuasz3mh4q9jlqlha0cl
 
-# Original description of motogiga (will be edited)
+# How to Run
  
-- 1st step is to download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
-  - Place them into a single folder by extracting them, take note of where this folder is.
-- 2nd step is to run `npm install` inside the folder (`cd folder` to get to the folder first).
-  - Make sure nodejs is on your PC, get it here: `https://nodejs.org/en`
-  - Open a command terminal (cmd.exe on windows/terminal on mac/linux).
-  - Type `cd folder-path-here` to open the folder.
-  - Run `npm install` next after getting to the correct folder. 
-- 3rd step is to put your private key exported from unisat at the top (Unisat > Account # > ... > Export > Hex Key).
-  - The place to put it is inside `index.ts`, at the top of the file where it says `YOUR PRIVATE KEY HERE`. 
-  - Please use a fresh wallet, I don't want anyone asking if this is malicious (Spoiler, it isn't malicious but still...).
-  - Be smart and only use automation on fresh wallets, it's not worth the risk any other way.
-- 4th step is to create a UTXO with 10.1 tBTC in it and get that txID (send yourself 10.1 tBTC and ***wait for confirm***).
-  - By sending your own account 10.1 tBTC you are creating a new unspent UTXO.
-  - Copy the ID from unisat wallet after hitting send by clicking "show in explorer" under the checkmark.
-  - The TX ID is the hash at the top, so copy that, add `:0` to the end of it, and paste it into `index.ts`
-- 5th step is to uncomment `transactionSplitterBasic(utxo).then(console.log);`, put your UTXO above it, then run `npx tsx index.ts`
-  - This is located ***at the bottom*** of `index.ts`, to uncomment them remove the `//` before the line of code. 
-- 6th step is to ***wait for that TX to confirm*** and copy the output TX ID and recomment out this step.
-  - You can track the progress by going to `https://mempool.space/testnet` and pasting the TX_ID there.
-- 7th step is to put that tx ID in this line under step 1.5: `splitSplitter("txid here")`, then run `npx tsx index.ts`
-  - This is located ***at the bottom*** of `index.ts`, to uncomment them remove the `//` before the line of code.
-- 8th step is to wait for all 200 of those TXNs to confirm and recomment out this step.
-  - You can track the progress by copying one of those IDs and going to `https://mempool.space/testnet` again.
-- 9th step is to uncomment all of the lines after 'step 2', so, the following:
-  ```js
-  const filePath = 'output_txns.txt';
+## 1. 
+- Download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
+- Extract the ZIP file if needed and make note of where the extracted folder is.
   
-  // Create a readline interface
-  const reader = readline.createInterface({
-   input: fs.createReadStream(filePath),
-   output: process.stdout,
-   terminal: false
-  });
-  
-  // Listen for the 'line' event
-  reader.on('line', (line) => {
-   // Perform your action on the line here
-   console.log(`Processing line: ${line}`);
-   transactionsCrafter(line)
-  });
-  
-  // Handle the 'close' event
-  reader.on('close', () => {
-   console.log('Finished reading the file.');
-  });
-  ```
-  Then run `npx tsx index.ts`
-  - This is located ***at the bottom*** of `index.ts`, to uncomment them remove the `//` before the line of code.
-- 10th and final step is to run relayer_no_redis.ts using `npx tsx relayer_no_redis.ts`.
-- Good job, you did it.
+## 2.
+- Run `npm install` inside the folder (`cd folder` to get to the folder first).
+- Make sure nodejs is on your computer, get it here: `https://nodejs.org/en`
+- Open a command terminal (cmd.exe on Windows/Terminal on Mac/Linux).
+- Type `cd folder-path-here` to open the folder.
+- Run `npm install` next after getting to the correct folder.
 
-**Make sure to do the following if you're running this more than one time:**
+## 3.
+- Put your private key exported from Unisat at the top (Unisat > Account # > ... > Export > Hex Key).
+- Create a new file in the root folder of the codebase named ".env". It should satart with a dot.
+  
+- The contents of the file should be the following (replace `<your private key here>` with your private key, obviously):
+
+  ```
+  PRIVATE_KEY=<your private key here>
+  ```
+
+- Be smart and only use automation on fresh wallets, it's not worth the risk any other way. (Let me be the brave boy who uses his main wallet to test :DDDD)
+
+## 4.   
+- Send yourself 10.1 tBTC and ***wait for confirmation***! By sending your own account 10.1 tBTC, you are creating a new unspent UTXO.
+- Copy the ID from Unisat after hitting Send by clicking "Show in Explorer" under the checkmark.
+- The TX ID is the hash at the top (looks something like this: 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3), copy it.
+
+## 5.
+- Run step 1 of the script by running the following command in cmd.exe/Terminal:
+
+  ```
+  npx tsx --env-file=.env index.ts 1 <the txid copied in the previous step>
+  ```
+
+- So, if the txid is 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3, you should run:
+
+  ```
+  npx tsx --env-file=.env index.ts 1 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
+  ```
+
+## 6.
+- Open the URL printed out to your console, copy the TXID and ***wait for the TX to confirm***.
+
+## 7.
+- Run step 2 of the script by running the following command in cmd.exe/Terminal:
+  ```
+  npx tsx --env-file=.env index.ts 2 <the txid copied in the previous step>
+  ```
+
+- So, if the txid is 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3, you should run:
+
+  ```
+  npx tsx --env-file=.env index.ts 1 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
+  ```
+
+## 8.
+- Wait for all 200 of those TXNs to confirm and recomment out this step.
+- You can track the progress by going to `https://mempool.space/testnet/address/<your testnet address>` and see whether you have unconfimed transactions. (This only works efficiently if you have only 1 process running for now - this will be drastically improved in the future).
+
+## 9.
+- Run step 3 of the script by running the following command in cmd.exe/Terminal:
+  ```
+  npx tsx --env-file=.env index.ts 3
+  ```
+
+## 10.
+- Smoke some green. You deserve it, chad.
+
+# Make sure to do the following if you're running this more than one time
+
 - Rename or delete crafted-transactions.txt.
-- Rename or delete output_txns.txt
-- Re-comment out all the steps except the one you're running in `index.ts`.
+- Rename or delete output_txns.txt.
+
+# Additional Info
 
 You can edit the values that are sent to increase or decrease gas used. This is to send 200,000 transactions at ~15 sats/vb.
 By changing the values and numbers inside each of the commented lines, you can achieve different number of transactions, and different gas amounts.
-I won't get into detail on how to up the gas values, because it'd start a gas war... but if you're smart enough to figure it out, go nuts.
 
-Full credit to https://github.com/cryptosalomao
-I just made it do more txns, faster.
-
-**Additional files:**
-- Python selenium bot which creates a new wallet, makes 5 new accounts, then attempts to swap.
+## Additional files
+- Python selenium bot which creates a new wallet, makes 5 new accounts, then attempts to swap. The file is _selenium_bot_sybiler.py_, take a look if you want. (will be obsolete soon)
 - Feel free to take this and extend it in any way you see fit. Works very well for automation.
-- The file is _selenium_bot_sybiler.py_, take a look if you want.
