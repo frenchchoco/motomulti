@@ -2,61 +2,109 @@
 
 A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga which is based on https://github.com/cryptosalomao/urabalu.
 
+# A Message
+
+I got banned from all the Motoswap TG groups for making the following tweet: https://twitter.com/fluffmoney/status/1782036629424673036
+
+Everything in the tweet is 100% factual and comes from the devs themselves. This is the first written post on X on the matter AFAIK. (Don't ask me why the devs didn't make an announcement post of all this...)
+
+Since we got paid for finishing this bot and the web UI, I will. (I'm not that shady as others might be.)
+
+However, don't expect me to be super involved after all this. Progress will be slower and in my own tempo.
+
 # Extra features compared to motogiga
 
 ⏳ parallel processing  
-⏳ the ability to set gas fees in sats/vb  
+✅ the ability to set gas fees in sats/vb  
 ⏳ built-in sybiling without a separate script  
 ⏳ replacing fees  
+✅ a new bulk token minter mode  
+✅ advanced error handling  
 ✅ using arguments to run different steps instead of commenting out stuff  
-⏳ eventually: eliminating the need of manually running different steps by watching tx confimations automatically
+⏳ eventually: eliminating the need of manually running different steps by watching tx confirmations automatically
 
 # pls gib
 
 If you found it useful, donate us precious tokens and i will spend it on hookers with dicks!
 
 ## Tamas (meeeeeee :3)
+
 Bitcoin: bc1pffdrehs8455lgnwquggf4dzf6jduz8v7d2usflyujq4ggh4jaapqkpyaa7  
 EVM-based tokens (Ethereum, Polygon, Avalanche etc.): 0x0De8947c2ABd59C201e5EcE142bFCd22253BFC0d  
 Solana: bzuNzCMgxRgWuDhg9yBTsto9rkNL96LsVWo6YurNQQf
 
-## Mike (motogiga dev)
-Soon...
-
 ## Guilherme (urabalu dev)
-Bitcoin: bc1qnggsl6k7npzaeql34w50ur4ytertps48tx7zqczuasz3mh4q9jlqlha0cl
+
+Bitcoin: 3D6TEUfALF7ZFnqs5pT9M6J3iWc49xotML  
+EVM-based tokens (Ethereum, Polygon, Avalanche etc.): 0x690346d8a7dfe01b01a2f1439e6ec40943d2866e  
+Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 
 # How to Run
  
-## 1. 
+## 1.
+
 - Download the repo (Code > Download as ZIP / Github / Github Desktop / etc).
 - Extract the ZIP file if needed and make note of where the extracted folder is.
   
 ## 2.
-- Run `npm install` inside the folder (`cd folder` to get to the folder first).
-- Make sure nodejs is on your computer, get it here: `https://nodejs.org/en`
-- Open a command terminal (cmd.exe on Windows/Terminal on Mac/Linux).
-- Type `cd folder-path-here` to open the folder.
+
+- Make sure NodeJS is on your computer, get it here: https://nodejs.org/en
+- Open a command terminal (cmd.exe on Windows and Terminal on Mac/Linux).
+- Type `cd "folder-path-here"` to open the folder. If your folder is located at C:\dev\motomulti, enter `cd "C:\dev\motomulti"`.
 - Run `npm install` next after getting to the correct folder.
 
 ## 3.
-- Put your private key exported from Unisat at the top (Unisat > Account # > ... > Export > Hex Key).
-- Create a new file in the root folder of the codebase named ".env". It should satart with a dot.
+
+- Copy your hex private key from Unisat (Account # > ... > Export Private Key > Hex Private Key).
+- Create a new file in the root folder of the codebase named ".env". The name should start with a dot.
   
-- The contents of the file should be the following (replace `<your private key here>` with your private key, obviously):
+- The contents of the file should be the following (replace the things between `<` and `>` with the values you want):
 
   ```
   PRIVATE_KEY=<your private key here>
+  GAS_FEES=<gas fees for the 3 steps in sats/vB, separated by commas>
+  MULTIPLIERS=<transaction multipliers for the 2 last steps involving multiple txes, separated by a comma>
+  MODE=<see below>
+  ```
+
+- There are 2 modes. You can change between swapping tokens (which farms you Moto points) and minting a token.
+  - To use the swap mode, write `SWAP <ticker A>-<ticker B>`.
+  - To use the mint mode, write `MINT <amount> <ticker>`.
+
+- Example 1:
+
+  ```
+  PRIVATE_KEY = y0uaRen0tg3tt1ngMyPr1vK3yUFuck3r
+  GAS_FEES = 120, 100, 55.6
+  MULTIPLIERS = 200, 1000
+  MODE = SWAP PIZZA-WAGMI
+  ```
+
+- Example 2:
+
+  ```
+  PRIVATE_KEY = y0uaRest1lln0tg3tt1ngMyPr1vK3yUFuck3r
+  GAS_FEES = 55, 55, 55
+  MULTIPLIERS = 150, 800
+  MODE = MINT 100 PIZZA
   ```
 
 - Be smart and only use automation on fresh wallets, it's not worth the risk any other way. (Let me be the brave boy who uses his main wallet to test :DDDD)
 
-## 4.   
-- Send yourself 10.1 tBTC and ***wait for confirmation***! By sending your own account 10.1 tBTC, you are creating a new unspent UTXO.
+## 4.
+
+- Run step 0 of the script by running the following command in cmd.exe/Terminal:
+
+  ```
+  npx tsx --env-file=.env index.ts 0
+  ```
+
+- Send yourself the amount it prints out and ***wait for confirmation***! By sending your own account tBTC, you are creating a new unspent UTXO.
 - Copy the ID from Unisat after hitting Send by clicking "Show in Explorer" under the checkmark.
 - The TX ID is the hash at the top (looks something like this: 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3), copy it.
 
 ## 5.
+
 - Run step 1 of the script by running the following command in cmd.exe/Terminal:
 
   ```
@@ -70,9 +118,11 @@ Bitcoin: bc1qnggsl6k7npzaeql34w50ur4ytertps48tx7zqczuasz3mh4q9jlqlha0cl
   ```
 
 ## 6.
+
 - Open the URL printed out to your console, copy the TXID and ***wait for the TX to confirm***.
 
 ## 7.
+
 - Run step 2 of the script by running the following command in cmd.exe/Terminal:
   ```
   npx tsx --env-file=.env index.ts 2 <the txid copied in the previous step>
@@ -85,16 +135,19 @@ Bitcoin: bc1qnggsl6k7npzaeql34w50ur4ytertps48tx7zqczuasz3mh4q9jlqlha0cl
   ```
 
 ## 8.
-- Wait for all 200 of those TXNs to confirm and recomment out this step.
+
+- ***Wait for all 200 of those TXNs to confirm***.
 - You can track the progress by going to `https://mempool.space/testnet/address/<your testnet address>` and see whether you have unconfimed transactions. (This only works efficiently if you have only 1 process running for now - this will be drastically improved in the future).
 
 ## 9.
+
 - Run step 3 of the script by running the following command in cmd.exe/Terminal:
   ```
   npx tsx --env-file=.env index.ts 3
   ```
 
 ## 10.
+
 - Smoke some green. You deserve it, chad.
 
 # Make sure to do the following if you're running this more than one time
@@ -108,5 +161,6 @@ You can edit the values that are sent to increase or decrease gas used. This is 
 By changing the values and numbers inside each of the commented lines, you can achieve different number of transactions, and different gas amounts.
 
 ## Additional files
+
 - Python selenium bot which creates a new wallet, makes 5 new accounts, then attempts to swap. The file is _selenium_bot_sybiler.py_, take a look if you want. (will be obsolete soon)
 - Feel free to take this and extend it in any way you see fit. Works very well for automation.

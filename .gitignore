@@ -1,3 +1,5 @@
 node_modules/
 .env
 under_dev/
+output_txns.txt
+crafted-transactions.txt
