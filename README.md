@@ -9,8 +9,9 @@ Features:
 ⏳ parallel processing  
 ⏳ the ability to set gas fees in sats/vb  
 ⏳ built-in sybiling without a separate script  
-⏳ replacing fees  
+⏳ replacing fees
 ⏳ using arguments to run different steps instead of commenting out stuff
+⏳ eventually: eliminating the need of manually running different steps by watching tx confimations automatically
 
 ---
  
