@@ -211,10 +211,10 @@ async function start() {
       }
 
       transactionSplitterBasic(argument + ":0").then((txid) => {
-        console.log(`TXID:\n${txid}\n`);
+        console.log(`TXID:\n${txid.txId}\n`);
 
         console.log(
-          `Open this URL to track progress:\nhttps://mempool.space/testnet/tx/${txid}`
+          `Open this URL to track progress:\nhttps://mempool.space/testnet/tx/${txid.txId}`
         );
       });
 
