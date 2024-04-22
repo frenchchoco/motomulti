@@ -6,11 +6,13 @@ A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga w
 
 I got banned from all the Motoswap TG groups for making the following tweet: https://twitter.com/fluffmoney/status/1782036629424673036
 
-Everything in the tweet is 100% factual and comes from the devs themselves. This is the first written post on X on the matter AFAIK. (Don't ask me why the devs didn't make an announcement post of all this...)
+Everything in the tweet is 100% factual and comes from the devs themselves. This is the first written post on X on the matter AFAIK. Don't ask me why the devs didn't make an announcement post of all this... It was allegedly "mentioned in X Spaces" (months after the token had been created with the fixed supply, BTW), but I (and many others) don't have the time to listen to all the Spaces on X.
 
 Since we got paid for finishing this bot and the web UI, I will. (I'm not that shady as others might be.)
 
 However, don't expect me to be super involved after all this. Progress will be slower and in my own tempo.
+
+Even so, I'll be around in the largest Moto Telegram chat I'm still in (https://t.me/motobikeridersclub), find me there if you need help (my profile: https://t.me/tamassengel)!
 
 # Extra features compared to motogiga
 
