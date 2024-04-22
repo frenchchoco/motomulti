@@ -132,7 +132,7 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - So, if the txid is 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3, you should run:
 
   ```
-  npx tsx --env-file=.env index.ts 1 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
+  npx tsx --env-file=.env index.ts 2 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
   ```
 
 ## 8.
