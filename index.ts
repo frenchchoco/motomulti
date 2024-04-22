@@ -199,7 +199,7 @@ const sendSplitSplitterTx = async (
 
 // #region Final Tx Crafter
 
-const finalTxCrafter = async () => {
+const finalTxCrafter = async (): Promise<void> => {
   const filePath = "output_txns.txt";
 
   // Create a readline interface
@@ -209,16 +209,19 @@ const finalTxCrafter = async () => {
     terminal: false,
   });
 
-  // Listen for the 'line' event
-  reader.on("line", (line) => {
-    // Perform your action on the line here
-    console.log(`Processing line: ${line}`);
-    finalTxCrafterForLine(line);
-  });
+  return new Promise<void>((resolve, _) => {
+    // Listen for the 'line' event
+    reader.on("line", (line) => {
+      // Perform your action on the line here
+      console.log(`Processing line: ${line}`);
+      finalTxCrafterForLine(line);
+    });
 
-  // Handle the 'close' event
-  reader.on("close", () => {
-    console.log("Finished reading the file.");
+    // Handle the 'close' event
+    reader.on("close", () => {
+      console.log("Finished reading the file.");
+      resolve();
+    });
   });
 };
 
@@ -228,7 +231,7 @@ const finalTxCrafterForLine = (txid: string) => {
     (_, i) => `${txid}:${i}`
   );
 
-  utxos.forEach((utxo) => {
+  utxos.forEach(async (utxo) => {
     const createdUtxo = getFinalTxData(utxo);
 
     fs.writeFileSync("./crafted-transactions.txt", `${createdUtxo}\n`, {
