@@ -118,11 +118,9 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
   npx tsx --env-file=.env index.ts 1 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
   ```
 
-## 6.
-
 - Open the URL printed out to your console, copy the TXID and ***wait for the TX to confirm***.
 
-## 7.
+## 6.
 
 - Run step 2 of the script by running the following command in cmd.exe/Terminal:
   ```
@@ -135,19 +133,19 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
   npx tsx --env-file=.env index.ts 2 2ad2c5e7711c213421f84718d1cfdcfad2f0043bf18bca3a678a101cc64137c3
   ```
 
-## 8.
-
 - ***Wait for all 200 of those TXNs to confirm***.
 - You can track the progress by going to `https://mempool.space/testnet/address/<your testnet address>` and see whether you have unconfimed transactions. (This only works efficiently if you have only 1 process running for now - this will be drastically improved in the future).
 
-## 9.
+## 7.
 
 - Run step 3 of the script by running the following command in cmd.exe/Terminal:
+
   ```
   npx tsx --env-file=.env index.ts 3
   ```
+- After a bit of processing, the final TXes will start to get generated. Expect this process to be long (it can take multiple days). The speed will get improved in the future; in the meantime, use multiple motomulti instances to speed the process up.
 
-## 10.
+## 8.
 
 - Smoke some green. You deserve it, chad.
 
