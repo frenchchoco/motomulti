@@ -92,6 +92,7 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
   MODE = MINT 100 PIZZA
   ```
 
+- Make sure not to modify this file while a process is running! Only modify it if you've reached the end of step 3 and before you re-run motomulti!
 - Be smart and only use automation on fresh wallets, it's not worth the risk any other way. (Let me be the brave boy who uses his main wallet to test :DDDD)
 
 ## 4.
