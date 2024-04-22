@@ -155,12 +155,7 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - Rename or delete crafted-transactions.txt.
 - Rename or delete output_txns.txt.
 
-# Additional Info
+## Additional Info
 
-You can edit the values that are sent to increase or decrease gas used. This is to send 200,000 transactions at ~15 sats/vb.
-By changing the values and numbers inside each of the commented lines, you can achieve different number of transactions, and different gas amounts.
-
-## Additional files
-
-- Python selenium bot which creates a new wallet, makes 5 new accounts, then attempts to swap. The file is _selenium_bot_sybiler.py_, take a look if you want. (will be obsolete soon)
+- There is a Python Selenium bot included which creates a new wallet, makes 5 new accounts, then attempts to swap. The file is _selenium_bot_sybiler.py_, take a look if you want. (will be obsolete soon)
 - Feel free to take this and extend it in any way you see fit. Works very well for automation.
