@@ -155,7 +155,7 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - Rename or delete crafted-transactions.txt.
 - Rename or delete output_txns.txt.
 
-## Additional Info
+# Additional Info
 
 - There is a Python Selenium bot included which creates a new wallet, makes 5 new accounts, then attempts to swap. The file is _selenium_bot_sybiler.py_, take a look if you want. (will be obsolete soon)
 - Feel free to take this and extend it in any way you see fit. Works very well for automation.
