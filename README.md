@@ -25,7 +25,8 @@ However, don't expect me to be super involved after all this. Progress will be s
 
 # pls gib
 
-If you found it useful, donate us precious tokens and i will spend it on hookers with dicks!
+If you found it useful, donate us precious tokens and i will spend it on hookers with dicks!  
+(I asked for Mike (motogiga dev) for addresses as well, but he didn't want to get donations for this :o)
 
 ## Tamas (meeeeeee :3)
 
