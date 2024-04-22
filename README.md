@@ -62,10 +62,10 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - The contents of the file should be the following (replace the things between `<` and `>` with the values you want):
 
   ```
-  PRIVATE_KEY=<your private key here>
-  GAS_FEES=<gas fees for the 3 steps in sats/vB, separated by commas>
-  MULTIPLIERS=<transaction multipliers for the 2 last steps involving multiple txes, separated by a comma>
-  MODE=<see below>
+  PRIVATE_KEY = <your private key here>
+  GAS_FEES = <gas fees for the 3 steps in sats/vB, separated by commas>
+  MULTIPLIERS = <transaction multipliers for the 2 last steps involving multiple txes, separated by a comma>
+  MODE = <see below>
   ```
 
 - There are 2 modes. You can change between swapping tokens (which farms you Moto points) and minting a token.
