@@ -1,3 +1,7 @@
+# funy danny
+
+oops no more updates. FUCK DANNY AND FUCK MOTOSWAP
+
 # motomulti
 
 A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga which is based on https://github.com/cryptosalomao/urabalu.
