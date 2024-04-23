@@ -1,4 +1,4 @@
-# funy danny
+# fuck danny
 
 oops no more updates. FUCK DANNY AND FUCK MOTOSWAP
 
