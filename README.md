@@ -1,16 +1,6 @@
-# fuck danny
-
-oops no more updates. FUCK DANNY AND FUCK MOTOSWAP
-
 # motomulti
 
 A Motoswap Testnet farmer. Based on https://github.com/sanjaybuddapar/motogiga which is based on https://github.com/cryptosalomao/urabalu.
-
-# A Message
-
-I got banned from all the official Motoswap Telegram groups for making the following tweet: https://twitter.com/fluffmoney/status/1782036629424673036
-
-Everything in the tweet is 100% factual and comes from the devs themselves. This is the first written post on X on the matter AFAIK. Don't ask me why the devs didn't make an announcement post of all this... It was allegedly "mentioned in X Spaces" (months after the token had been created with the fixed supply, BTW), but I (and many others) don't have the time to listen to all the Spaces on X.
 
 # Extra features compared to motogiga
 
@@ -22,23 +12,6 @@ Everything in the tweet is 100% factual and comes from the devs themselves. This
 ✅ advanced error handling  
 ✅ using arguments to run different steps instead of commenting out stuff  
 ⏳ eventually: eliminating the need of manually running different steps by watching tx confirmations automatically
-
-# pls gib
-
-If you found it useful, donate us precious tokens and i will spend it on hookers with dicks!  
-(I asked for Mike (motogiga dev) for addresses as well, but he didn't want to get donations for this :o)
-
-## Tamas (meeeeeee :3)
-
-Bitcoin: bc1pffdrehs8455lgnwquggf4dzf6jduz8v7d2usflyujq4ggh4jaapqkpyaa7  
-EVM-based tokens (Ethereum, Polygon, Avalanche etc.): 0x0De8947c2ABd59C201e5EcE142bFCd22253BFC0d  
-Solana: bzuNzCMgxRgWuDhg9yBTsto9rkNL96LsVWo6YurNQQf
-
-## Guilherme (urabalu dev)
-
-Bitcoin: 3D6TEUfALF7ZFnqs5pT9M6J3iWc49xotML  
-EVM-based tokens (Ethereum, Polygon, Avalanche etc.): 0x690346d8a7dfe01b01a2f1439e6ec40943d2866e  
-Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 
 # How to Run
  
@@ -75,8 +48,8 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - Example 1:
 
   ```
-  PRIVATE_KEY = y0uaRen0tg3tt1ngMyPr1vK3yUFuck3r
-  GAS_FEES = 120, 100, 55.6
+  PRIVATE_KEY = your_private_key
+  GAS_FEES = 14, 14, 14
   MULTIPLIERS = 200, 1000
   MODE = SWAP PIZZA-WAGMI
   ```
@@ -84,7 +57,7 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
 - Example 2:
 
   ```
-  PRIVATE_KEY = y0uaRest1lln0tg3tt1ngMyPr1vK3yUFuck3r
+  PRIVATE_KEY = your_private_key
   GAS_FEES = 55, 55, 55
   MULTIPLIERS = 150, 800
   MODE = MINT 100 PIZZA
@@ -146,9 +119,6 @@ Solana: ETgfy4sSWb9NesEDCGg3Ns2iw9SsjZgiziobquwfQaPq
   ```
 - After a bit of processing, the final TXes will start to get generated. Expect this process to be long (it can take multiple days). The speed will get improved in the future; in the meantime, use multiple motomulti instances to speed the process up.
 
-## 8.
-
-- Smoke some green. You deserve it, chad.
 
 # Make sure to do the following if you're running this more than one time
 
